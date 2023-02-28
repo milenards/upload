@@ -9,7 +9,9 @@ $extensao = explode(".", $nomeDoArquivo);
 $nomeNovo = round(microtime(true)) . end($extensao);
 echo $nomeNovo;
 
-exit();
-move_uploaded_file($_FILES["arquivo"]["tmp_name"],$pasta . $nomeDoArquivo);
+
+move_uploaded_file($_FILES["arquivo"]["tmp_name"],$pasta . $nomeNovo);
 
 ?>
+
+<img src="<php echo $pasta . $nomeDoArquivo; ?>">
